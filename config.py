@@ -1,2 +1,2 @@
-token = '1003595517:AAGXwSF4G8nA83ppBcoNb9VkUMfnRcg4Z0I'
-admin_id = '254407586'
+token = 'token'
+admin_id = 'user id'
