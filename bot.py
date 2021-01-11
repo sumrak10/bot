@@ -135,6 +135,9 @@ def get_phone(message):
 		markup.add('1 круг', '3 круга', '5 кругов')
 		msg = bot.send_message(message.from_user.id, 'Выберите кол-во кругов:', reply_markup=markup)
 		bot.register_next_step_handler(msg, get_epoch)
+	elif message.text == 'В главное меню':
+		msg = bot.send_message(message.from_user.id, "Меню", reply_markup=menu_kb())
+		bot.register_next_step_handler(msg, get_action)
 	else:
 		msg = bot.send_message(message.from_user.id, 'Введите правильный номер телефона! (+998... или +7...)', reply_markup=down_kb())
 		bot.register_next_step_handler(msg, get_phone)
